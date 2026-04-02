@@ -64,15 +64,15 @@ export default function InputJuara() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#7A1F1F] to-[#3A1C1C] py-20 px-4 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#0F1419] to-[#1E293B] py-20 px-4 flex items-center justify-center">
       <div className="w-full max-w-2xl bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-lg p-6">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-amber-400/10 px-4 py-1 rounded-full border border-amber-400/20 mb-4">
-            <Trophy className="h-5 w-5 text-amber-400" />
-            <span className="text-sm text-amber-300">P3K 2025</span>
+          <div className="inline-flex items-center gap-2 bg-sky-400/10 px-4 py-1 rounded-full border border-sky-400/20 mb-4">
+            <Trophy className="h-5 w-5 text-sky-400" />
+            <span className="text-sm text-sky-300">P3K 2025</span>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent mb-2">
+          <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-400 to-cyan-500 bg-clip-text text-transparent mb-2">
             Input Data Juara
           </h1>
           <p className="text-gray-300 text-sm">Masukkan hasil penilaian peserta</p>
@@ -83,9 +83,9 @@ export default function InputJuara() {
           {/* Dropdowns */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-amber-300">Kategori</label>
+              <label className="block text-sm font-medium text-sky-300">Kategori</label>
               <div className="relative">
-                <div className="absolute left-3 top-3 text-amber-400">
+                <div className="absolute left-3 top-3 text-sky-400">
                   <School className="w-5 h-5" />
                 </div>
                 <select
@@ -103,9 +103,9 @@ export default function InputJuara() {
             </div>
 
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-amber-300">Mata Lomba</label>
+              <label className="block text-sm font-medium text-sky-300">Mata Lomba</label>
               <div className="relative">
-                <div className="absolute left-3 top-3 text-amber-400">
+                <div className="absolute left-3 top-3 text-sky-400">
                   <Award className="w-5 h-5" />
                 </div>
                 <select
@@ -127,7 +127,7 @@ export default function InputJuara() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {juaraData.map((item, index) => (
               <div key={index} className="space-y-2">
-                <label className="block text-sm font-medium text-amber-300">
+                <label className="block text-sm font-medium text-sky-300">
                   {item.juaraKe}
                 </label>
                 <input
@@ -144,7 +144,7 @@ export default function InputJuara() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-amber-600 to-yellow-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            className="w-full py-3 bg-gradient-to-r from-sky-600 to-cyan-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <Trophy className="w-5 h-5" />
             <span className="font-medium">Simpan Data</span>

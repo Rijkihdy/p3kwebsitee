@@ -305,7 +305,7 @@ export default function ParticipantsPage() {
       <motion.div /* ... */ >
         {/* ... (Header, Kontrol Search & Tombol - tidak berubah signifikan) ... */}
         <div className="flex items-center justify-center mb-8 gap-3">
-          <Users className="h-8 w-8 text-red-600" />
+          <Users className="h-8 w-8 text-sky-600" />
           <h1 className="text-3xl font-bold text-gray-800 dark:text-white text-center">
             Daftar Peserta P3K
           </h1>
@@ -347,7 +347,7 @@ export default function ParticipantsPage() {
         <div className="overflow-hidden bg-white dark:bg-gray-800 shadow-xl rounded-2xl border border-gray-200 dark:border-gray-700">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-              <thead className="bg-gradient-to-r from-red-600 to-yellow-500 text-white">
+              <thead className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white">
                 {/* ... (Header tabel tidak berubah) ... */}
                 <tr>
                   <th className="px-4 py-4 text-left text-xs font-semibold uppercase tracking-wider w-16">
@@ -385,7 +385,7 @@ export default function ParticipantsPage() {
                   ))
                 ) : error ? (
                   // ... (Error state tidak berubah) ...
-                  <tr><td colSpan={5} className="text-center py-10 text-red-500"><ServerCrash className="h-10 w-10 mx-auto mb-2" /> {error}</td></tr>
+                  <tr><td colSpan={5} className="text-center py-10 text-sky-500"><ServerCrash className="h-10 w-10 mx-auto mb-2" /> {error}</td></tr>
                 ) : paginatedParticipants.length === 0 ? (
                   // ... (No data state tidak berubah) ...
                   <tr><td colSpan={5} className="text-center py-10 text-gray-500 dark:text-gray-400"><Search className="h-10 w-10 mx-auto mb-2 text-gray-300" /> Tidak ada data peserta yang cocok.</td></tr>
@@ -405,7 +405,7 @@ export default function ParticipantsPage() {
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="border-red-500 text-red-500 hover:bg-red-600 hover:text-white transition gap-1 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-500"
+                                className="border-sky-500 text-sky-500 hover:bg-sky-600 hover:text-white transition gap-1 dark:border-sky-400 dark:text-sky-400 dark:hover:bg-sky-500"
                                 onClick={() => openDeleteModal(p)}
                             >
                                 <Trash2 className="h-3 w-3" /> Hapus
@@ -480,7 +480,7 @@ export default function ParticipantsPage() {
         <motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 50, scale: 0.9 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-8" role="dialog" aria-modal="true">
           <div className="flex justify-between items-center mb-6 border-b pb-3 dark:border-gray-700">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2"><Pencil className="h-5 w-5 text-blue-600" /> Edit Nama Peserta</h2>
-            <button onClick={closeEditModal} aria-label="Tutup" className="text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition rounded-full p-1 hover:bg-red-100 dark:hover:bg-gray-700"><X className="h-6 w-6" /></button>
+            <button onClick={closeEditModal} aria-label="Tutup" className="text-gray-400 hover:text-sky-600 dark:hover:text-sky-500 transition rounded-full p-1 hover:bg-sky-100 dark:hover:bg-gray-700"><X className="h-6 w-6" /></button>
           </div>
           <div className="mb-4"><Label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"> Nama Sekolah </Label><p className="text-gray-900 dark:text-white font-medium bg-gray-100 dark:bg-gray-700 p-3 rounded-md">{editingParticipant?.nama_sekolah}</p></div>
           <div className="mb-4"><Label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"> Lomba </Label><p className="text-gray-900 dark:text-white font-medium bg-gray-100 dark:bg-gray-700 p-3 rounded-md">{editingParticipant?.lomba}</p></div>
@@ -500,12 +500,12 @@ export default function ParticipantsPage() {
         <motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 50, scale: 0.9 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-8" role="dialog" aria-modal="true">
           <div className="flex justify-between items-center mb-6 border-b pb-3 dark:border-gray-700">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2"><PlusCircle className="h-5 w-5 text-blue-600" /> Tambah Peserta</h2>
-            <button onClick={closeAddModal} aria-label="Tutup" className="text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition rounded-full p-1 hover:bg-red-100 dark:hover:bg-gray-700"><X className="h-6 w-6" /></button>
+            <button onClick={closeAddModal} aria-label="Tutup" className="text-gray-400 hover:text-sky-600 dark:hover:text-sky-500 transition rounded-full p-1 hover:bg-sky-100 dark:hover:bg-gray-700"><X className="h-6 w-6" /></button>
           </div>
           <div className="space-y-4">
             <div>
               <Label htmlFor="addSingleNamaSekolahCombobox" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-1">
-                <School size={14} /> Nama Sekolah <span className="text-red-500">*</span>
+                <School size={14} /> Nama Sekolah <span className="text-sky-500">*</span>
               </Label>
               <Popover open={isSekolahComboboxOpen} onOpenChange={setIsSekolahComboboxOpen}>
                 <PopoverTrigger asChild>
@@ -544,7 +544,7 @@ export default function ParticipantsPage() {
             </div>
             <div>
               <Label htmlFor="addSingleDataPeserta" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-1">
-                <User size={14} /> Nama Peserta <span className="text-red-500">*</span>
+                <User size={14} /> Nama Peserta <span className="text-sky-500">*</span>
               </Label>
               <Input
                 id="addSingleDataPeserta" name="data_peserta" type="text"
@@ -555,7 +555,7 @@ export default function ParticipantsPage() {
             </div>
             <div>
               <Label htmlFor="addSingleLomba" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-1">
-                <Swords size={14} /> Mata Lomba <span className="text-red-500">*</span>
+                <Swords size={14} /> Mata Lomba <span className="text-sky-500">*</span>
               </Label>
               <Select value={newSingleParticipantForm.lomba} onValueChange={handleNewSingleParticipantLombaSelectChange}>
                 <SelectTrigger id="addSingleLomba" className="w-full dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -598,12 +598,12 @@ export default function ParticipantsPage() {
         >
           <div className="flex justify-between items-center p-6 border-b dark:border-gray-700 sticky top-0 bg-white dark:bg-gray-800 z-10">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2"><Users className="h-5 w-5 text-teal-600" /> Tambah Banyak Peserta</h2>
-            <button onClick={closeAddMultipleModal} aria-label="Tutup" className="text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition rounded-full p-1 hover:bg-red-100 dark:hover:bg-gray-700"><X className="h-6 w-6" /></button>
+            <button onClick={closeAddMultipleModal} aria-label="Tutup" className="text-gray-400 hover:text-sky-600 dark:hover:text-sky-500 transition rounded-full p-1 hover:bg-sky-100 dark:hover:bg-gray-700"><X className="h-6 w-6" /></button>
           </div>
           <div className="p-6 space-y-6 overflow-y-auto flex-grow">
             <div>
               <Label htmlFor="addMultipleNamaSekolahCombobox" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-1">
-                <School size={14} /> Nama Sekolah <span className="text-red-500">*</span>
+                <School size={14} /> Nama Sekolah <span className="text-sky-500">*</span>
               </Label>
               <Popover open={isMultipleSekolahComboboxOpen} onOpenChange={setIsMultipleSekolahComboboxOpen}>
                 <PopoverTrigger asChild>
@@ -642,7 +642,7 @@ export default function ParticipantsPage() {
             </div>
             <div>
               <Label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Pilih Mata Lomba & Input Nama Peserta <span className="text-red-500">*</span>
+                Pilih Mata Lomba & Input Nama Peserta <span className="text-sky-500">*</span>
               </Label>
               <div className="space-y-4 max-h-64 overflow-y-auto pr-2 border rounded-md p-3 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30">
                 {LOMBA_LIST.map((lomba) => (
@@ -672,7 +672,7 @@ export default function ParticipantsPage() {
                             <Button
                               type="button" variant="ghost" size="icon"
                               onClick={() => removePesertaFieldForMultiple(lomba.nama, index)}
-                              className="text-red-500 hover:text-red-700 hover:bg-red-100 dark:hover:bg-gray-700 h-9 w-9"
+                              className="text-sky-500 hover:text-sky-700 hover:bg-sky-100 dark:hover:bg-gray-700 h-9 w-9"
                                disabled={index === 0 && (lombaPesertaInputs[lomba.nama] || []).length === 1}
                             >
                               <X className="h-4 w-4" />
@@ -720,7 +720,7 @@ export default function ParticipantsPage() {
           >
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                <AlertTriangle className="h-5 w-5 text-red-500" /> Konfirmasi Hapus
+                <AlertTriangle className="h-5 w-5 text-sky-500" /> Konfirmasi Hapus
                 </h2>
                 <button onClick={closeDeleteModal} aria-label="Tutup" className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition rounded-full p-1">
                 <X className="h-6 w-6" />
@@ -734,7 +734,7 @@ export default function ParticipantsPage() {
                 <p><strong>Sekolah:</strong> {participantToDelete.nama_sekolah}</p>
                 <p><strong>Lomba:</strong> {participantToDelete.lomba}</p>
             </div>
-            <p className="text-xs text-red-600 dark:text-red-400 mb-6">
+            <p className="text-xs text-sky-600 dark:text-sky-400 mb-6">
                 Tindakan ini tidak dapat diurungkan.
             </p>
             <div className="flex justify-end gap-3">
@@ -745,7 +745,7 @@ export default function ParticipantsPage() {
                 variant="destructive"
                 onClick={handleConfirmDelete}
                 disabled={isDeleting}
-                className="bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600"
+                className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600"
                 >
                 {isDeleting ? (<Save className="h-4 w-4 animate-spin mr-2" />) : (<Trash2 className="h-4 w-4 mr-2" />)}
                 {isDeleting ? 'Menghapus...' : 'Ya, Hapus'}

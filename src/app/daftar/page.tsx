@@ -619,7 +619,7 @@ export default function DaftarPage() {
 
         {errors.length > 0 && (
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-                <Alert variant="destructive" className="shadow-md border-l-4 border-l-red-600">
+                <Alert variant="destructive" className="shadow-md border-l-4 border-l-sky-600">
                     <AlertCircle className="h-5 w-5" />
                     <AlertTitle>Oops! Perlu Perhatian</AlertTitle>
                     <AlertDescription>

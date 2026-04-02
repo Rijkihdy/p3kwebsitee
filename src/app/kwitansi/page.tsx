@@ -68,7 +68,7 @@ function KwitansiContent() {
     if (loading) {
         return (
             <div className="text-center text-gray-600 dark:text-gray-300">
-                <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-red-600" />
+                <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-sky-600" />
                 <h1 className="text-xl font-semibold">Mencari Kwitansi Anda...</h1>
                 <p className="text-sm">Mohon tunggu sebentar.</p>
             </div>
@@ -79,11 +79,11 @@ function KwitansiContent() {
     if (error) {
         return (
             <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-xl p-8 max-w-md w-full shadow-2xl text-center border-t-4 border-red-500"
+                className="bg-white dark:bg-gray-800 rounded-xl p-8 max-w-md w-full shadow-2xl text-center border-t-4 border-sky-500"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-5" />
+                <AlertTriangle className="w-16 h-16 text-sky-500 mx-auto mb-5" />
                 <h1 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Terjadi Kesalahan</h1>
                 <p className="text-gray-600 dark:text-gray-400 mb-8">{error}</p>
                  <Link href="/" passHref>
@@ -114,7 +114,7 @@ function KwitansiContent() {
                 className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-600 shadow-inner flex flex-col items-center"
                 whileHover={{ scale: 1.02 }}
             >
-                <FileText className="w-20 h-20 text-red-500 mb-4" />
+                <FileText className="w-20 h-20 text-sky-500 mb-4" />
                 <p className="font-mono text-xs text-gray-500 dark:text-gray-400">
                     kwitansi-{nomor}.pdf
                 </p>
@@ -128,7 +128,7 @@ function KwitansiContent() {
                 download={`kwitansi-${nomor}.pdf`} // Atribut download
                 target="_blank" // Buka di tab baru (baik untuk Supabase URL)
                 rel="noopener noreferrer"
-                className={`w-full bg-gradient-to-r from-yellow-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg ${!kwitansiUrl ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 active:scale-95'}`}
+                className={`w-full bg-gradient-to-r from-sky-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg ${!kwitansiUrl ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 active:scale-95'}`}
             >
                 <Download className="w-5 h-5 mr-3" />
                 Download Kwitansi (PDF)
@@ -152,11 +152,11 @@ function KwitansiContent() {
 
 export default function KwitansiPage() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 bg-gradient-to-br from-yellow-50 via-red-50 to-red-100 dark:from-gray-900 dark:via-red-900/50 dark:to-gray-900">
+        <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-100 dark:from-gray-900 dark:via-sky-900/50 dark:to-gray-900">
             {/* Suspense diperlukan karena useSearchParams butuh waktu untuk render di client */}
             <Suspense fallback={
                 <div className="text-center text-gray-600 dark:text-gray-300">
-                    <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-red-600" />
+                    <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-sky-600" />
                     <h1 className="text-xl font-semibold">Memuat Halaman...</h1>
                 </div>
             }>

@@ -72,35 +72,35 @@ export default function SuksesContent() {
         <div className="text-center space-y-4">
           <CheckCircle className="h-16 w-16 text-green-600 mx-auto animate-bounce" />
           <h1 className="text-3xl font-bold text-green-700">Pendaftaran Berhasil!</h1>
-          <p className="text-orange-600">
+          <p className="text-sky-600">
             Data Anda telah tersimpan. Silakan unduh kwitansi sebagai bukti pendaftaran.
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6 border border-orange-200">
+        <div className="bg-white rounded-lg shadow p-6 border border-sky-200">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div>
-              <p className="font-semibold text-orange-700">Kode Unit</p>
+              <p className="font-semibold text-sky-700">Kode Unit</p>
               <p>{kode_unit}</p>
             </div>
             <div>
-              <p className="font-semibold text-orange-700">Nama Sekolah</p>
+              <p className="font-semibold text-sky-700">Nama Sekolah</p>
               <p>{nama_sekolah}</p>
             </div>
             <div>
-              <p className="font-semibold text-orange-700">Nama Pengirim</p>
+              <p className="font-semibold text-sky-700">Nama Pengirim</p>
               <p>{nama_pengirim}</p>
             </div>
             <div>
-              <p className="font-semibold text-orange-700">WhatsApp</p>
+              <p className="font-semibold text-sky-700">WhatsApp</p>
               <p>{whatsapp}</p>
             </div>
             <div>
-              <p className="font-semibold text-orange-700">Kategori</p>
+              <p className="font-semibold text-sky-700">Kategori</p>
               <p>{kategori}</p>
             </div>
             <div>
-              <p className="font-semibold text-orange-700">Total Bayar</p>
+              <p className="font-semibold text-sky-700">Total Bayar</p>
               <p>Rp {parseInt(total || '0').toLocaleString('id-ID')}</p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function SuksesContent() {
           </button>
         </div>
 
-        <div className="text-center text-sm text-orange-600 space-y-2">
+        <div className="text-center text-sm text-sky-600 space-y-2">
           <p>✉️ Kwitansi akan dikirim juga melalui WhatsApp yang terdaftar</p>
           <p>📞 Hubungi panitia jika ada pertanyaan atau kendala teknis</p>
         </div>

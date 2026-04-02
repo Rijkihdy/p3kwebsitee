@@ -57,14 +57,14 @@ const itemVariants = { /* ... */ };
 // --- StatCard ---
 const StatCard = ({ label, value, icon: Icon }: { label: string; value: number | string; icon: React.ElementType }) => (
   <motion.div 
-    className="p-5 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg flex items-center gap-4 transition-all hover:border-amber-400/30 hover:shadow-amber-500/5 hover:scale-105"
+    className="p-5 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg flex items-center gap-4 transition-all hover:border-sky-400/30 hover:shadow-sky-500/5 hover:scale-105"
     variants={itemVariants}
   >
-    <div className="w-12 h-12 rounded-full bg-amber-400/10 flex items-center justify-center text-amber-400">
+    <div className="w-12 h-12 rounded-full bg-sky-400/10 flex items-center justify-center text-sky-400">
         <Icon className="w-6 h-6" />
     </div>
     <div>
-        <div className="text-sm text-amber-300/80">{label}</div>
+        <div className="text-sm text-sky-300/80">{label}</div>
         <div className="text-3xl font-bold text-white mt-1">{value}</div>
     </div>
   </motion.div>
@@ -73,19 +73,19 @@ const StatCard = ({ label, value, icon: Icon }: { label: string; value: number |
 // --- RankingCard ---
 const RankingCard = ({ school, rank }: { school: SchoolRanking; rank: number }) => {
     const rankColors: { [key: number]: string } = {
-        1: 'border-amber-400 bg-amber-900/20 shadow-amber-500/10',
+        1: 'border-sky-400 bg-sky-900/20 shadow-sky-500/10',
         2: 'border-gray-400 bg-gray-700/20 shadow-gray-500/10',
-        3: 'border-orange-600 bg-orange-900/20 shadow-orange-600/10',
+        3: 'border-sky-600 bg-sky-900/20 shadow-sky-600/10',
     };
     const rankIconColors: { [key: number]: string } = {
-        1: 'text-amber-400',
+        1: 'text-sky-400',
         2: 'text-gray-400',
-        3: 'text-orange-600',
+        3: 'text-sky-600',
     };
     const isTop3 = rank <= 3;
     return (
         <motion.div 
-            className={`bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-amber-400/30 transition-all shadow-md hover:shadow-xl ${rankColors[rank] || 'hover:bg-white/10'}`}
+            className={`bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-sky-400/30 transition-all shadow-md hover:shadow-xl ${rankColors[rank] || 'hover:bg-white/10'}`}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
         >
@@ -103,16 +103,16 @@ const RankingCard = ({ school, rank }: { school: SchoolRanking; rank: number }) 
                 </div>
                 <div className="flex gap-3 md:gap-5 text-center">
                     <div>
-                        <div className="text-lg font-bold text-amber-400">{school.total_juara_1}</div>
-                        <div className="text-xs text-amber-300/70">🥇</div>
+                        <div className="text-lg font-bold text-sky-400">{school.total_juara_1}</div>
+                        <div className="text-xs text-sky-300/70">🥇</div>
                     </div>
                     <div>
                         <div className="text-lg font-bold text-gray-300">{school.total_juara_2}</div>
                         <div className="text-xs text-gray-400/70">🥈</div>
                     </div>
                     <div>
-                        <div className="text-lg font-bold text-orange-400">{school.total_juara_3}</div>
-                        <div className="text-xs text-orange-500/70">🥉</div>
+                        <div className="text-lg font-bold text-sky-400">{school.total_juara_3}</div>
+                        <div className="text-xs text-sky-500/70">🥉</div>
                     </div>
                 </div>
             </div>
@@ -139,10 +139,10 @@ const CompetitionAccordion = ({ title, results, category }: {
       >
         <div className="flex-1 min-w-0">
           <h3 className="font-semibold text-white text-base truncate">{title}</h3>
-          <p className="text-xs text-amber-300/80 mt-1">{category}</p>
+          <p className="text-xs text-sky-300/80 mt-1">{category}</p>
         </div>
         <ChevronDown
-          className={`w-5 h-5 text-amber-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-sky-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       <AnimatePresence>
@@ -163,9 +163,10 @@ const CompetitionAccordion = ({ title, results, category }: {
                                 key={juaraKe}
                                 className="p-3 text-sm bg-black/20 rounded-lg border border-white/10 flex items-center gap-3"
                             >
-                                <Trophy className="w-4 h-4 text-amber-300 flex-shrink-0" />
+                                <Trophy className="w-4 h-4 text-sky-300 flex-shrink-0" />
+
                                 <div>
-                                    <div className="font-medium text-amber-300 truncate">{juaraKe}</div>
+                                    <div className="font-medium text-sky-300 truncate">{juaraKe}</div>
                                     <div className="text-white truncate text-xs" title={peserta?.nama_sekolah}>
                                         {peserta?.nama_sekolah || "-"}
                                     </div>
@@ -310,18 +311,18 @@ const Leaderboard = () => {
   if (loading) return <LoadingSkeleton />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#501515] to-[#1A0D0D] py-16 sm:py-24 px-4 md:px-8 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#0F1419] to-[#1E293B] py-16 sm:py-24 px-4 md:px-8 text-white">
       <div className="absolute inset-0 -z-10 opacity-20">
         {/* Placeholder untuk efek bintang/partikel */}
       </div>
       <div className="max-w-6xl mx-auto space-y-12">
         <motion.header /* ... sama ... */ >
             <div className="flex items-center gap-4">
-                <div className="p-3 bg-amber-400/10 rounded-full border-2 border-amber-400/30">
-                    <Trophy className="h-8 w-8 text-amber-400" />
+                <div className="p-3 bg-sky-400/10 rounded-full border-2 border-sky-400/30">
+                    <Trophy className="h-8 w-8 text-sky-400" />
                 </div>
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-500">
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-cyan-500">
                         Leaderboard P3K
                     </h1>
                     <p className="text-gray-400 text-sm mt-1">Hasil Perolehan Juara Sementara</p>
@@ -342,14 +343,14 @@ const Leaderboard = () => {
                     whileTap={{ scale: 0.9 }}
                     title="Refresh Data"
                 >
-                    <RefreshCw className="w-5 h-5 text-amber-400" />
+                    <RefreshCw className="w-5 h-5 text-sky-400" />
                 </motion.button>
             </div>
         </motion.header>
 
         {error && ( /* ... sama ... */ 
              <motion.div 
-                className="p-4 text-center text-red-400 bg-red-900/30 rounded-lg border border-red-500/50 flex items-center justify-center gap-3"
+                className="p-4 text-center text-sky-400 bg-sky-900/30 rounded-lg border border-sky-500/50 flex items-center justify-center gap-3"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             >
                 <ServerCrash className="w-5 h-5"/> {error}
@@ -365,7 +366,7 @@ const Leaderboard = () => {
         </motion.div>
 
         <section className="bg-black/20 p-6 rounded-3xl border border-white/10 shadow-2xl">
-          <h2 className="text-2xl font-semibold mb-6 text-center text-amber-400">🏆 Peringkat Sekolah 🏆</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center text-sky-400">🏆 Peringkat Sekolah 🏆</h2>
           <div className="flex justify-center mb-6 bg-white/5 p-1.5 rounded-full border border-white/10">
             {kategoriList.map((kategori) => (
               <button
@@ -373,7 +374,7 @@ const Leaderboard = () => {
                 onClick={() => setActiveCategory(kategori)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === kategori 
-                  ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-black shadow-lg' 
+                  ? 'bg-gradient-to-r from-sky-500 to-cyan-600 text-black shadow-lg' 
                   : 'text-gray-300 hover:bg-white/10'
                 }`}
               >
@@ -395,13 +396,13 @@ const Leaderboard = () => {
         </section>
 
         <section className="bg-black/20 p-6 rounded-3xl border border-white/10 shadow-2xl">
-          <h2 className="text-2xl font-semibold mb-6 text-center text-amber-400">📋 Hasil Per Mata Lomba 📋</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center text-sky-400">📋 Hasil Per Mata Lomba 📋</h2>
           <div className="relative mb-6">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-amber-400/70" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-sky-400/70" />
             <input
               type="text"
               placeholder="Cari mata lomba, kategori, atau sekolah..." // Placeholder diupdate
-              className="w-full pl-12 pr-4 py-3 text-sm rounded-xl border-2 border-white/20 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 transition-all"
+              className="w-full pl-12 pr-4 py-3 text-sm rounded-xl border-2 border-white/20 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400/50 transition-all"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

@@ -41,7 +41,7 @@ export default function RootLayout({
       lang="id"
       className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="antialiased bg-gradient-to-br from-yellow-100 via-orange-100 to-pink-100 min-h-screen">
+      <body className="antialiased bg-gradient-to-br from-sky-100 via-cyan-100 to-blue-100 min-h-screen">
         <NavbarDesktop />
         <NavbarMobile />
 

@@ -341,13 +341,13 @@ export default function HalamanKeuangan() {
                     <div className="text-xl sm:text-2xl font-bold text-green-600">{formatRupiah(summary.totalMasuk)}</div>
                 </CardContent>
             </Card>
-            <Card className="shadow-lg border-l-4 border-red-500">
+            <Card className="shadow-lg border-l-4 border-sky-500">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">Total Pengeluaran</CardTitle>
-                    <ArrowDownCircle className="h-5 w-5 text-red-500"/>
+                    <ArrowDownCircle className="h-5 w-5 text-sky-500"/>
                 </CardHeader>
                 <CardContent>
-                    <div className="text-xl sm:text-2xl font-bold text-red-600">{formatRupiah(summary.totalKeluar)}</div>
+                    <div className="text-xl sm:text-2xl font-bold text-sky-600">{formatRupiah(summary.totalKeluar)}</div>
                 </CardContent>
             </Card>
             <Card className="shadow-lg border-l-4 border-blue-500">
@@ -356,7 +356,7 @@ export default function HalamanKeuangan() {
                     <Banknote className="h-5 w-5 text-blue-500"/>
                 </CardHeader>
                 <CardContent>
-                    <div className={`text-xl sm:text-2xl font-bold ${summary.saldo >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
+                    <div className={`text-xl sm:text-2xl font-bold ${summary.saldo >= 0 ? 'text-blue-600' : 'text-sky-600'}`}>
                         {formatRupiah(summary.saldo)}
                     </div>
                 </CardContent>
@@ -443,7 +443,7 @@ export default function HalamanKeuangan() {
                     <ArrowUpCircle className="h-3.5 w-3.5 mr-1.5" />
                     Excel (Masuk)
                 </Button>
-                <Button variant="outline" size="sm" onClick={() => handleExport('Keluar')} disabled={transactions.filter(t=>t.jenis === 'Keluar').length === 0 || loading} className="text-xs sm:text-sm text-red-600 border-red-500 hover:bg-red-50 hover:text-red-700">
+                <Button variant="outline" size="sm" onClick={() => handleExport('Keluar')} disabled={transactions.filter(t=>t.jenis === 'Keluar').length === 0 || loading} className="text-xs sm:text-sm text-sky-600 border-sky-500 hover:bg-sky-50 hover:text-sky-700">
                     <ArrowDownCircle className="h-3.5 w-3.5 mr-1.5" />
                     Excel (Keluar)
                 </Button>
@@ -492,7 +492,7 @@ export default function HalamanKeuangan() {
                         <TableCell className="text-right px-3 sm:px-4 text-green-600 whitespace-nowrap">
                           {t.jenis === 'Masuk' ? formatRupiah(t.jumlah) : '-'}
                         </TableCell>
-                        <TableCell className="text-right px-3 sm:px-4 text-red-600 whitespace-nowrap">
+                        <TableCell className="text-right px-3 sm:px-4 text-sky-600 whitespace-nowrap">
                           {t.jenis === 'Keluar' ? formatRupiah(t.jumlah) : '-'}
                         </TableCell>
                         <TableCell className="px-3 py-3 sm:px-4 hidden sm:table-cell">
@@ -503,7 +503,7 @@ export default function HalamanKeuangan() {
                           ) : ( <span className="text-xs text-gray-400">-</span> )}
                         </TableCell>
                         <TableCell className="text-center px-3 py-3 sm:px-4">
-                          <Button variant="ghost" size="icon" className="text-red-500 hover:text-red-700 hover:bg-red-100 rounded-full w-7 h-7 sm:w-8 sm:h-8" onClick={() => handleDelete(t.id, t.bukti_url)} disabled={submitting} >
+                          <Button variant="ghost" size="icon" className="text-sky-500 hover:text-sky-700 hover:bg-sky-100 rounded-full w-7 h-7 sm:w-8 sm:h-8" onClick={() => handleDelete(t.id, t.bukti_url)} disabled={submitting} >
                             <Trash2 className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                           </Button>
                         </TableCell>

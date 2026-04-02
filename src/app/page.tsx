@@ -54,7 +54,7 @@ const HorizonGlow = () => {
         <motion.div
             className="absolute -bottom-1/3 left-0 right-0 h-1/2 
                        bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] 
-                       from-amber-400/20 via-orange-500/10 to-transparent 
+                       from-sky-400/20 via-cyan-500/10 to-transparent 
                        pointer-events-none z-1 filter blur-3xl"
             animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.7, 0.4] }}
             transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
@@ -75,8 +75,8 @@ const GoldenLightMotes = ({ count = 70 }) => {
         <div className="absolute inset-0 z-2 pointer-events-none overflow-hidden">
             {motes.map((p, i) => (
                 <motion.div
-                    key={`mote-${i}`} className="absolute rounded-full bg-amber-300/50"
-                    style={{ top: p.y, left: p.x, width: p.size, height: p.size, boxShadow: '0 0 5px 0px rgba(253, 186, 116, 0.5)' }}
+                    key={`mote-${i}`} className="absolute rounded-full bg-cyan-300/50"
+                    style={{ top: p.y, left: p.x, width: p.size, height: p.size, boxShadow: '0 0 5px 0px rgba(56, 189, 248, 0.5)' }}
                     animate={{ x: [0, p.directionX, -p.directionX, 0], y: [0, p.directionY, p.directionY / 2, 0], opacity: [0, 0.6, 0.6, 0] }}
                     transition={{ duration: p.duration, repeat: Infinity, delay: p.delay, ease: "easeInOut", opacity: { times: [0, 0.2, 0.8, 1] } }}
                 />
@@ -111,7 +111,7 @@ export default function Home() {
 
   return (
     // Gunakan ref jika diperlukan
-    <div ref={targetRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-orange-900 to-amber-900 text-stone-50"> 
+    <div ref={targetRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-sky-100 via-cyan-100 to-blue-50 text-slate-900">
         
         {isMounted && (
             <>
@@ -129,7 +129,7 @@ export default function Home() {
           >
             <motion.div variants={itemVariants} className="mb-5">
               <span className="inline-flex items-center gap-2 text-xs md:text-sm font-medium 
-                               border border-amber-500/50 text-amber-300
+                               border border-sky-500/50 text-sky-300
                                px-4 py-1.5 rounded-full bg-black/10 backdrop-blur-sm">
                 <Trophy className="w-4 h-4" />
                 MEMPEREBUTKAN PIALA GUBERNUR JAWA BARAT 
@@ -138,21 +138,20 @@ export default function Home() {
 
             <motion.h1 
                 variants={itemVariants} 
-                className="text-4xl md:text-4xl font-extrabold bg-gradient-to-r from-red-600 via-orange-600 to-red-600 bg-clip-text text-transparent leading-tight mb-6 
-                           tracking-tight drop-shadow-md"
+                className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-500 bg-clip-text text-transparent leading-tight mb-6 tracking-tight drop-shadow-lg"
             >
-                P3K UNSUR 2025 <br/>
-                <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-amber-400 bg-clip-text text-transparent">
-                  &quot;Golden Hours Spread Knowledge and Saves Lives&quot;
+                P3K UNSUR 2026 <br/>
+                <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-300 bg-clip-text text-transparent">
+                  "Sky Blue Era, Save Lives with Smart Response"
                 </span>
             </motion.h1>
 
             <motion.p 
                 variants={itemVariants} 
-                className="text-md md:text-md text-stone-200 mb-12 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed"
+                className="text-md md:text-lg text-slate-700 mb-12 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed"
             >
                 PEKAN PERLOMBAAN PMR KSR PMI UNIT UNIVERSITAS SURYAKANCANA TINGKAT
-                WIRA DAN MADYA SE-WILAYAH PROVINSI JAWA BARAT TAHUN 2025.
+                WIRA DAN MADYA SE-WILAYAH PROVINSI JAWA BARAT TAHUN 2026.
             </motion.p>
 
             <motion.div 
@@ -162,9 +161,9 @@ export default function Home() {
               <Button
                 size="lg" 
                 className="group w-full sm:w-auto h-14 px-10 rounded-lg 
-                           bg-orange-500 text-white
-                           text-base font-semibold shadow-lg shadow-orange-500/20 
-                           hover:bg-orange-600 hover:shadow-xl hover:shadow-orange-500/30
+                           bg-sky-500 text-white
+                           text-base font-semibold shadow-lg shadow-sky-400/40 
+                           hover:bg-sky-600 hover:shadow-xl hover:shadow-sky-500/50
                            transition-all duration-300 transform hover:scale-[1.03]"
                 asChild
               >
@@ -178,8 +177,8 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 className="group w-full sm:w-auto h-14 px-10 rounded-lg 
-                           border-stone-50/40 bg-white/5 backdrop-blur-sm
-                           text-stone-50 hover:bg-white/10 hover:border-stone-50/60 
+                           border-sky-300/60 bg-white/10 backdrop-blur-sm
+                           text-slate-800 hover:bg-white/20 hover:border-sky-400/60 
                            transition-all duration-300 font-medium"
                 asChild
               >
@@ -199,7 +198,7 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, type: 'spring', stiffness: 80 }}
           >
-            <h3 className="text-center text-lg font-semibold text-amber-300 mb-8 flex items-center justify-center gap-2 tracking-wider">
+            <h3 className="text-center text-lg font-semibold text-sky-300 mb-8 flex items-center justify-center gap-2 tracking-wider">
               <Sunrise className="w-5 h-5" />
               {timeLeft.ended ? "ACARA SEDANG BERLANGSUNG" : "HITUNG MUNDUR ACARA"}
             </h3>

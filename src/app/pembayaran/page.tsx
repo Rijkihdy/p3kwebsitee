@@ -280,7 +280,7 @@ export default function PembayaranPage() {
                     variants={itemVariants}
                 >
                     <motion.div 
-                        className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-500 to-red-600 rounded-full mx-auto shadow-lg"
+                        className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-sky-500 to-cyan-600 rounded-full mx-auto shadow-lg"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}
@@ -308,7 +308,7 @@ export default function PembayaranPage() {
                         {/* School Info */}
                         <div className="space-y-4">
                             <h2 className="text-xl font-semibold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-3 flex items-center">
-                                <Building className="w-5 h-5 mr-3 text-red-600"/>
+                                <Building className="w-5 h-5 mr-3 text-sky-600"/>
                                 Informasi Sekolah
                             </h2>
                             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-sm">
@@ -347,7 +347,7 @@ export default function PembayaranPage() {
                         {/* Payment Details */}
                         <div className="space-y-4">
                             <h2 className="text-xl font-semibold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-3 flex items-center">
-                                <CheckCircle className="w-5 h-5 mr-3 text-red-600"/>
+                                <CheckCircle className="w-5 h-5 mr-3 text-sky-600"/>
                                 Rincian Pembayaran
                             </h2>
                             <div className="space-y-3">
@@ -376,7 +376,7 @@ export default function PembayaranPage() {
                                 })}
                                 <div className="flex justify-between items-center pt-5 border-t border-gray-200 dark:border-gray-700 mt-4">
                                     <span className="text-lg font-semibold text-gray-900 dark:text-white">Total Pembayaran</span>
-                                    <span className="text-2xl font-bold text-red-600">
+                                    <span className="text-2xl font-bold text-sky-600">
                                         Rp {dataPendaftaran.totalBayar.toLocaleString('id-ID')}
                                     </span>
                                 </div>
@@ -415,7 +415,7 @@ export default function PembayaranPage() {
                                     </div>
                                 </div>
                                 <div className="p-4 bg-white dark:bg-gray-700 rounded-lg text-xs text-gray-600 dark:text-gray-300 shadow-sm">
-                                    <p className="text-red-600 dark:text-red-400 font-medium">✱ Pastikan jumlah transfer sesuai total pembayaran.</p>
+                                    <p className="text-sky-600 dark:text-sky-400 font-medium">✱ Pastikan jumlah transfer sesuai total pembayaran.</p>
                                     <p className="mt-1">✱ Simpan bukti transfer untuk diunggah.</p>
                                     <p className="mt-1">✱ Format: JPG/PNG/PDF (Maks. 5MB).</p>
                                 </div>
@@ -429,7 +429,7 @@ export default function PembayaranPage() {
                         variants={itemVariants}
                     >
                         <h2 className="text-xl font-semibold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-3 flex items-center">
-                            <Send className="w-5 h-5 mr-3 text-red-600"/>
+                            <Send className="w-5 h-5 mr-3 text-sky-600"/>
                             Konfirmasi & Unggah Bukti
                         </h2>
                         <div className="space-y-6">
@@ -472,7 +472,7 @@ export default function PembayaranPage() {
                                                 </div>
                                                 <button 
                                                     onClick={handleRemoveBukti} 
-                                                    className="text-red-500 hover:text-red-700 dark:hover:text-red-300"
+                                                    className="text-sky-500 hover:text-sky-700 dark:hover:text-sky-300"
                                                     title="Hapus File"
                                                 >
                                                     <Trash2 className="w-5 h-5"/>
@@ -509,7 +509,7 @@ export default function PembayaranPage() {
 
                              {submitError && ( 
                                 <motion.div
-                                    className="p-4 bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 rounded-lg text-sm flex items-center"
+                                    className="p-4 bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 rounded-lg text-sm flex items-center"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                 >
@@ -524,7 +524,7 @@ export default function PembayaranPage() {
                                 whileTap={{ scale: 0.97 }}
                                 disabled={loading || !bukti || !namaPengirim.trim()}
                                 onClick={handleSubmit}
-                                className="w-full py-3.5 bg-gradient-to-r from-yellow-600 to-red-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-base"
+                                className="w-full py-3.5 bg-gradient-to-r from-sky-600 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-base"
                             >
                                 {loading ? (
                                     <>

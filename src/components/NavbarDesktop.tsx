@@ -84,13 +84,13 @@ export default function NavbarDesktop() {
                   
                   {isActive ? (
                     <motion.div
-                      className="absolute -bottom-0.5 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"
+                      className="absolute -bottom-0.5 left-0 right-0 h-1 bg-gradient-to-r from-sky-400 to-sky-600 rounded-full"
                       layoutId="navbar-underline" 
                       transition={{ type: 'spring', bounce: 0.25, duration: 0.6 }}
                     />
                   ) : (
                     
-                    <div className="absolute -bottom-0.5 left-0 right-0 h-1 bg-amber-500 rounded-full 
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-1 bg-sky-500 rounded-full 
                                  scale-x-0 group-hover:scale-x-100 transition-transform 
                                  duration-300 ease-out origin-center" 
                     />
@@ -106,10 +106,10 @@ export default function NavbarDesktop() {
               whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(245, 158, 11, 0.3)" }} 
               whileTap={{ scale: 0.98 }}
               className="group flex items-center gap-2 px-6 py-3 rounded-full 
-                       bg-gradient-to-r from-amber-500 to-orange-500 
-                       text-white text-sm font-bold shadow-lg shadow-amber-500/25 
+                       bg-gradient-to-r from-sky-500 to-cyan-500 
+                       text-white text-sm font-bold shadow-lg shadow-sky-500/25 
                        transition-all duration-300 ease-in-out
-                       hover:from-amber-600 hover:to-orange-600" 
+                       hover:from-sky-600 hover:to-cyan-600" 
             >
               DAFTAR SEKARANG
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

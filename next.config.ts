@@ -1,17 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {
-  images: {
-    domains: ['llvesnxqpifjjrcecnxj.supabase.co'], // Ganti dengan URL Supabase Anda
-  },
-};
 const nextConfig = {
-  experimental: {
-    turbo: {
-      enabled: true, // Fix for turbo experimental setting
-    },
-  },
-   images: {
+  images: {
     remotePatterns: [
       {
         protocol: 'https',

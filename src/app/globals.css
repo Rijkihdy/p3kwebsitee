@@ -10,16 +10,34 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #dff4ff 0%, #bfe9ff 50%, #d8f0ff 100%);
+  color: #0f2c56;
 }
 
 :root {
-  --primary-color: 245, 158, 11;
-  --danger-color: 185, 28, 28;
+  --primary-color: 72, 184, 255;
+  --primary: rgb(72, 184, 255);
+  --primary-foreground: rgb(255, 255, 255);
+  --secondary: rgb(175, 230, 255);
+  --accent: rgb(45, 158, 255);
+  --background: rgb(245, 253, 255);
+  --foreground: rgb(7, 34, 64);
+  --card: rgba(255, 255, 255, 0.92);
+  --border: rgb(187, 222, 251);
+  --ring: rgb(104, 176, 255);
+  --muted: rgb(223, 240, 255);
+  --muted-foreground: rgb(78, 112, 148);
+  --destructive: rgb(235, 78, 96);
+  --sidebar: rgb(232, 243, 255);
+  --sidebar-foreground: rgb(15, 32, 64);
+  --sidebar-primary: rgb(70, 158, 255);
+  --sidebar-primary-foreground: rgb(255, 255, 255);
 }
 
 .font-digital {
   font-family: 'Share Tech Mono', monospace;
 }
+
 
 
 

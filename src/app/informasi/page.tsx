@@ -87,7 +87,7 @@ export default function InformasiPage() {
                   time="08.00 - 16.30 WIB"
                   title="Hari Ketiga"
                   items={['Pendaftaran Ulang', 'Senam Poco-Poco', 'Unjuk Kabisa Mojang Jajaka', 'Pengumuman Pemenang']}
-                  accent="orange"
+                  accent="sky"
                 />
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function InformasiPage() {
         <motion.div variants={fadeInUp}>
           <Card className="rounded-xl border border-gray-200/70 bg-white">
             <div className="p-6 space-y-4">
-              <div className="flex items-center gap-3 text-orange-600">
+              <div className="flex items-center gap-3 text-sky-600">
                 <Link2 className="w-6 h-6" />
                 <h2 className="text-xl font-semibold">Link Penting</h2>
               </div>
@@ -217,7 +217,7 @@ const LinkButton = ({ icon, title, description, href }: any) => (
       rel="noopener noreferrer"
       className="flex items-start gap-4"
     >
-      <div className={`p-2 rounded-lg bg-orange-100 text-orange-600`}>
+      <div className={`p-2 rounded-lg bg-sky-100 text-sky-600`}>
         {icon}
       </div>
       <div>

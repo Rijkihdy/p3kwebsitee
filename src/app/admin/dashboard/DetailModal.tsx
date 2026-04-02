@@ -175,7 +175,7 @@ export default function DetailModal({ open, onClose, data }: DetailModalProps) {
         break;
       case 'rejected':
         icon = <ShieldAlert className="h-3.5 w-3.5 mr-1.5"/>;
-        className = "bg-red-100 text-red-800 border-red-300 hover:bg-red-100 font-semibold";
+        className = "bg-sky-100 text-sky-800 border-sky-300 hover:bg-sky-100 font-semibold";
         text = "Ditolak";
         break;
     }

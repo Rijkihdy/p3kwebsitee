@@ -171,21 +171,21 @@ export default function AdminDashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-4 md:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#0F1419] to-[#1E293B] p-4 md:p-8 text-white">
       <div className="mx-auto max-w-7xl">
         {/* Header Section */}
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl">
+            <h1 className="text-2xl font-bold text-white md:text-3xl lg:text-4xl">
               Database Pendaftaran
-              <span className="ml-2 text-lg text-blue-600 md:text-xl">{filteredData.length} data</span>
+              <span className="ml-2 text-lg text-sky-400 md:text-xl">{filteredData.length} data</span>
             </h1>
           </div>
           <Button 
             variant="default"
             size="sm"
             onClick={() => { setFormParticipant(null); setFormOpen(true); }}
-            className="gap-2 shadow-lg transition-all hover:scale-[1.02] bg-blue-600 hover:bg-blue-700 text-white"
+            className="gap-2 shadow-lg transition-all hover:scale-[1.02] bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white"
           >
             <Plus className="h-4 w-4" />
             Tambah Peserta
@@ -373,7 +373,7 @@ export default function AdminDashboard() {
                                         {[
                                         { icon: <Eye />, action: () => setSelectedParticipant(row), color: 'text-blue-600', label: 'Detail' },
                                         { icon: <Pencil />, action: () => { setFormParticipant(row); setFormOpen(true); }, color: 'text-green-600', label: 'Edit' },
-                                        { icon: <Trash2 />, action: () => handleDelete(row.id), color: 'text-red-600', label: 'Hapus' },
+                                        { icon: <Trash2 />, action: () => handleDelete(row.id), color: 'text-sky-600', label: 'Hapus' },
                                         ].map((btn, i) => (
                                         <Tooltip key={i}>
                                             <TooltipTrigger asChild>

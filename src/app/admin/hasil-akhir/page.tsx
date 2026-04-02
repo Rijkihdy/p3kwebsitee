@@ -79,7 +79,7 @@ const ResultCard = ({ item, onImageClick, onDownloadClick }: { item: HasilAkhir;
 
     return (
         <motion.article
-            className="group relative bg-black/30 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-amber-500/10 hover:border-amber-400/30"
+            className="group relative bg-black/30 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-sky-500/10 hover:border-sky-400/30"
             variants={itemVariants}
             layout
         >
@@ -107,7 +107,7 @@ const ResultCard = ({ item, onImageClick, onDownloadClick }: { item: HasilAkhir;
                     <Button
                         size="icon"
                         variant="outline"
-                        className="bg-amber-400/10 text-amber-300 border-amber-400/20 hover:bg-amber-400/20 rounded-full h-12 w-12"
+                        className="bg-sky-400/10 text-sky-300 border-sky-400/20 hover:bg-sky-400/20 rounded-full h-12 w-12"
                         title="Unduh Gambar"
                         onClick={(e) => {
                             e.stopPropagation();
@@ -126,7 +126,7 @@ const ResultCard = ({ item, onImageClick, onDownloadClick }: { item: HasilAkhir;
                 <h3 className="font-semibold text-gray-100 text-sm line-clamp-1" title={lombaName}>
                     {lombaName}
                 </h3>
-                <div className="flex items-center gap-2 text-xs text-amber-300/80">
+                <div className="flex items-center gap-2 text-xs text-sky-300/80">
                     <School className="h-4 w-4 flex-shrink-0" />
                     <span className="line-clamp-1" title={schoolName}>{schoolName}</span>
                 </div>
@@ -169,7 +169,7 @@ const CustomSelect = ({
         <select
             value={value}
             onChange={onChange}
-            className="appearance-none w-full pl-10 pr-8 py-3 text-sm rounded-xl border-2 border-white/20 bg-white/5 text-gray-200 placeholder-gray-400 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 transition-all"
+            className="appearance-none w-full pl-10 pr-8 py-3 text-sm rounded-xl border-2 border-white/20 bg-white/5 text-gray-200 placeholder-gray-400 focus:outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400/50 transition-all"
         >
             <option value="" className="bg-gray-800">{placeholder}</option>
             {options.map((option) => {
@@ -179,10 +179,10 @@ const CustomSelect = ({
                 return <option key={option.value} value={option.value} className="bg-gray-800">{option.label}</option>;
             })}
         </select>
-        <div className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-400 pointer-events-none">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 text-sky-400 pointer-events-none">
             <IconComponent className="h-5 w-5" />
         </div>
-        <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-amber-400 pointer-events-none">
+        <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-sky-400 pointer-events-none">
             <ChevronDown className="h-5 w-5" />
         </div>
     </div>
@@ -311,7 +311,7 @@ const filteredData = useMemo(() => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-[#4A1313] to-[#1A0D0D] text-white">
+        <div className="min-h-screen bg-gradient-to-br from-black via-[#0F1419] to-[#1E293B] text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                 <motion.div
                     className="mb-12 text-center space-y-3"
@@ -319,11 +319,11 @@ const filteredData = useMemo(() => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="inline-flex items-center gap-3 bg-amber-400/10 px-6 py-2 rounded-full border border-amber-400/20 mb-4 shadow-lg">
-                        <Trophy className="h-6 w-6 text-amber-400" />
-                        <span className="text-lg font-semibold text-amber-300">Hasil Penilaian P3K 2025</span>
+                    <div className="inline-flex items-center gap-3 bg-sky-400/10 px-6 py-2 rounded-full border border-sky-400/20 mb-4 shadow-lg">
+                        <Trophy className="h-6 w-6 text-sky-400" />
+                        <span className="text-lg font-semibold text-sky-300">Hasil Penilaian P3K 2025</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-500 bg-clip-text text-transparent tracking-tight">
+                    <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-sky-300 via-sky-400 to-cyan-500 bg-clip-text text-transparent tracking-tight">
                         Galeri Form Penilaian
                     </h1>
                     <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
@@ -339,12 +339,12 @@ const filteredData = useMemo(() => {
                 >
                     <div className="flex flex-col md:flex-row gap-4 items-center">
                         <div className="relative flex-1 w-full">
-                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-amber-400/70" />
+                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-sky-400/70" />
                             <Input
                                 placeholder="Cari berdasarkan nama sekolah..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-12 pr-4 py-3 text-sm rounded-xl border-2 border-white/20 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 transition-all"
+                                className="w-full pl-12 pr-4 py-3 text-sm rounded-xl border-2 border-white/20 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400/50 transition-all"
                             />
                         </div>
                         <CustomSelect
@@ -370,14 +370,14 @@ const filteredData = useMemo(() => {
                             <span className='text-sm text-gray-400'>Filter Aktif:</span>
                             {selectedLomba && (
                                 <motion.div
-                                    className="bg-amber-400/10 px-3 py-1.5 rounded-full text-xs sm:text-sm flex items-center gap-2 border border-amber-400/20 text-amber-300"
+                                    className="bg-sky-400/10 px-3 py-1.5 rounded-full text-xs sm:text-sm flex items-center gap-2 border border-sky-400/20 text-sky-300"
                                     initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}
                                 >
                                     <Trophy className="h-4 w-4" />
                                     {selectedLomba}
                                     <button
                                         onClick={() => setSelectedLomba('')}
-                                        className="text-amber-400 hover:text-white rounded-full bg-white/10 hover:bg-red-500/50 p-0.5"
+                                        className="text-sky-400 hover:text-white rounded-full bg-white/10 hover:bg-sky-500/50 p-0.5"
                                     > <X className="h-3 w-3" /> </button>
                                 </motion.div>
                             )}
@@ -390,7 +390,7 @@ const filteredData = useMemo(() => {
                                     &quot;{searchQuery}&quot;
                                     <button
                                         onClick={() => setSearchQuery('')}
-                                        className="text-purple-400 hover:text-white rounded-full bg-white/10 hover:bg-red-500/50 p-0.5"
+                                        className="text-purple-400 hover:text-white rounded-full bg-white/10 hover:bg-sky-500/50 p-0.5"
                                     > <X className="h-3 w-3" /> </button>
                                 </motion.div>
                             )}
@@ -404,7 +404,7 @@ const filteredData = useMemo(() => {
                                     {kategoriFilterOptions.find(opt => opt.value === selectedKategori)?.label || selectedKategori}
                                     <button
                                         onClick={() => setSelectedKategori('')}
-                                        className="text-teal-400 hover:text-white rounded-full bg-white/10 hover:bg-red-500/50 p-0.5"
+                                        className="text-teal-400 hover:text-white rounded-full bg-white/10 hover:bg-sky-500/50 p-0.5"
                                     > <X className="h-3 w-3" /> </button>
                                 </motion.div>
                             )}
@@ -428,7 +428,7 @@ const filteredData = useMemo(() => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 className="mx-auto w-24 h-24 bg-white/5 rounded-full flex items-center justify-center border-2 border-white/10 border-dashed"
                             >
-                                <FileX2 className="h-12 w-12 text-amber-400/30" />
+                                <FileX2 className="h-12 w-12 text-sky-400/30" />
                             </motion.div>
                             <h2 className="text-2xl font-semibold text-gray-300 mt-6">Oops! Data Tidak Ditemukan</h2>
                             <p className="text-gray-500 text-base mt-2">

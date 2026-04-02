@@ -396,7 +396,7 @@ export default function DaftarUlangPage() {
                               type="number"
                               value={item.nomor_urut ?? ''}
                               onChange={(e) => handleNomorUrutChange(item.id, e.target.value)}
-                              className="w-20 text-center mx-auto h-9 no-print border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                              className="w-20 text-center mx-auto h-9 no-print border-gray-300 focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                               min="1"
                             />
                             <span className='hidden print-only-text'>{item.nomor_urut ?? '-'}</span>

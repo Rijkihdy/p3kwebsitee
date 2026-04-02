@@ -139,17 +139,17 @@ const handleUpload = async () => {
 };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#7A1F1F] to-[#3A1C1C] py-12 md:py-16">
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#0F1419] to-[#1E293B] py-12 md:py-16">
       <div className="max-w-2xl mx-auto px-4">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 md:p-8 shadow-lg">
           {/* Header Section */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-amber-400/10 px-4 py-1 rounded-full border border-amber-400/20 mb-4">
-              <Trophy className="h-5 w-5 text-amber-400" />
-              <span className="text-sm text-amber-300">P3K 2025</span>
+            <div className="inline-flex items-center gap-2 bg-sky-400/10 px-4 py-1 rounded-full border border-sky-400/20 mb-4">
+              <Trophy className="h-5 w-5 text-sky-400" />
+              <span className="text-sm text-sky-300">P3K 2025</span>
             </div>
             
-            <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent mb-2">
+            <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-400 to-cyan-500 bg-clip-text text-transparent mb-2">
               Upload Hasil Akhir
             </h1>
             <p className="text-gray-300 text-sm">Unggah hasil karya peserta sesuai ketentuan</p>
@@ -159,9 +159,9 @@ const handleUpload = async () => {
           <div className="space-y-4">
             {/* Mata Lomba */}
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-amber-300">Mata Lomba</label>
+              <label className="block text-sm font-medium text-sky-300">Mata Lomba</label>
               <div className="relative">
-                <div className="absolute left-3 top-3 text-amber-400">
+                <div className="absolute left-3 top-3 text-sky-400">
                   <Trophy className="w-5 h-5" />
                 </div>
                 <select
@@ -180,9 +180,9 @@ const handleUpload = async () => {
 
             {/* Nama Sekolah */}
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-amber-300">Nama Sekolah</label>
+              <label className="block text-sm font-medium text-sky-300">Nama Sekolah</label>
               <div className="relative">
-                <div className="absolute left-3 top-3 text-amber-400">
+                <div className="absolute left-3 top-3 text-sky-400">
                   <School className="w-5 h-5" />
                 </div>
                 <input
@@ -198,9 +198,9 @@ const handleUpload = async () => {
 
             {/* Nomor Urut */}
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-amber-300">Nomor Urut</label>
+              <label className="block text-sm font-medium text-sky-300">Nomor Urut</label>
               <div className="relative">
-                <div className="absolute left-3 top-3 text-amber-400">
+                <div className="absolute left-3 top-3 text-sky-400">
                   <Hash className="w-5 h-5" />
                 </div>
                 <input
@@ -216,7 +216,7 @@ const handleUpload = async () => {
 
             {/* File Upload */}
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-amber-300">Unggah Karya</label>
+              <label className="block text-sm font-medium text-sky-300">Unggah Karya</label>
               <div className="relative">
               <input
                 type="file"
@@ -229,9 +229,9 @@ const handleUpload = async () => {
               />
               <label 
                 htmlFor="file-upload"
-                className="flex flex-col items-center justify-center h-32 border-2 border-dashed border-white/20 rounded-lg bg-white/5 hover:border-amber-400 transition-colors cursor-pointer"
+                className="flex flex-col items-center justify-center h-32 border-2 border-dashed border-white/20 rounded-lg bg-white/5 hover:border-sky-400 transition-colors cursor-pointer"
               >
-                <UploadCloud className="h-8 w-8 text-amber-400 mb-2" />
+                <UploadCloud className="h-8 w-8 text-sky-400 mb-2" />
                 <span className="text-gray-300 text-sm text-center px-4">
                   {file_path ? file_path.name : 'Klik untuk memilih file'}
                 </span>
@@ -243,7 +243,7 @@ const handleUpload = async () => {
             {/* Preview */}
             {preview && (
               <div className="mt-4 space-y-2">
-                <p className="text-sm text-amber-300">Pratinjau:</p>
+                <p className="text-sm text-sky-300">Pratinjau:</p>
                 <div className="relative aspect-square rounded-lg overflow-hidden border-2 border-white/10">
                   <Image
                     src={preview}
@@ -260,7 +260,7 @@ const handleUpload = async () => {
               <Button 
                 onClick={handleUpload} 
                 disabled={loading}
-                className="w-full py-3 bg-gradient-to-r from-amber-600 to-yellow-700 hover:from-amber-700 hover:to-yellow-800 text-white rounded-lg transition-all"
+                className="w-full py-3 bg-gradient-to-r from-sky-600 to-cyan-700 hover:from-sky-700 hover:to-cyan-800 text-white rounded-lg transition-all"
               >
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">

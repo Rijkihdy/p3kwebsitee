@@ -100,7 +100,7 @@ export default function NavbarMobile() {
         
         <motion.button 
           onClick={() => setOpen(!open)}
-          className="p-2 rounded-full text-amber-600 hover:bg-amber-50 transition-colors z-50" // Z-index agar di atas overlay
+          className="p-2 rounded-full text-sky-600 hover:bg-sky-50 transition-colors z-50" // Z-index agar di atas overlay
           aria-label="Toggle menu"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -170,12 +170,12 @@ export default function NavbarMobile() {
                             className={`flex items-center gap-4 p-4 rounded-xl text-base font-medium transition-all duration-200 group
                             ${
                               isActive 
-                                ? 'bg-amber-50 text-amber-700 shadow-sm border border-amber-100' // Styling aktif lebih jelas
+                                ? 'bg-sky-50 text-sky-700 shadow-sm border border-sky-100' // Styling aktif lebih jelas
                                 : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                             }`}
                           >
-                            <div className={`p-1.5 rounded-md ${isActive ? 'bg-amber-100' : 'bg-gray-100 group-hover:bg-white'}`}>
-                               <Icon className={`w-5 h-5 ${isActive ? 'text-amber-600' : 'text-gray-500 group-hover:text-amber-600'}`} />
+                            <div className={`p-1.5 rounded-md ${isActive ? 'bg-sky-100' : 'bg-gray-100 group-hover:bg-white'}`}>
+                               <Icon className={`w-5 h-5 ${isActive ? 'text-sky-600' : 'text-gray-500 group-hover:text-sky-600'}`} />
                             </div>
                             <span>{item.label}</span>
                             {item.external && <ExternalLink className="w-4 h-4 ml-auto text-gray-400" />}
@@ -196,9 +196,9 @@ export default function NavbarMobile() {
                     href="/daftar"
                     onClick={() => setOpen(false)}
                     className="group flex items-center justify-center gap-3 w-full 
-                               bg-gradient-to-r from-amber-500 to-orange-500 
+                               bg-gradient-to-r from-sky-500 to-cyan-500 
                                text-white py-3.5 px-6 rounded-full font-bold 
-                               hover:shadow-xl hover:shadow-amber-500/30 
+                               hover:shadow-xl hover:shadow-sky-500/30 
                                transition-all duration-300 transform hover:scale-[1.02]"
                   >
                     <UserPlus className="w-5 h-5" />

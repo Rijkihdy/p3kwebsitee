@@ -317,8 +317,8 @@ ${createLombaString(statsMadya)}
                             <StatCard
                                 title="Total Tim Terdaftar"
                                 value={globalTotalTim} // <-- Gunakan global
-                                icon={<Users2 className="w-6 h-6 text-amber-600 dark:text-amber-400" />}
-                                color="amber"
+                                icon={<Users2 className="w-6 h-6 text-sky-600 dark:text-sky-400" />}
+                                color="sky"
                             />
                             <StatCard
                                 title="Total Peserta"
@@ -447,7 +447,7 @@ ${createLombaString(statsMadya)}
 
                 {/* --- Grid Chart Baru (Tim per Lomba, Menggunakan filteredData) --- */}
                 <div className="grid grid-cols-1 gap-6">
-                    <ChartCard title={`Tim per Mata Lomba (${selectedKategori})`} icon={<Trophy className="w-6 h-6 text-amber-500" />}>
+                    <ChartCard title={`Tim per Mata Lomba (${selectedKategori})`} icon={<Trophy className="w-6 h-6 text-sky-500" />}>
                         {loading ? <Skeleton className="h-full w-full rounded-xl bg-slate-200 dark:bg-slate-700" /> : (
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={timPerLombaData} margin={{ top: 5, right: 20, left: -10, bottom: 40 }}>
